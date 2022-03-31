@@ -32,6 +32,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'gitlibtest/Classes/**/*'
   
+  s.vendored_frameworks = 'gitlibtest/Frameworks/App.framework',
+    'gitlibtest/Frameworks/Flutter.framework'
+    
   # s.resource_bundles = {
   #   'gitlibtest' => ['gitlibtest/Assets/*.png']
   # }
