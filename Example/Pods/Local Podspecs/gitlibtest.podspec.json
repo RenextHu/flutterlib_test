@@ -1,0 +1,26 @@
+{
+  "name": "gitlibtest",
+  "version": "0.1.0",
+  "summary": "A short description of gitlibtest.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/bh_iOS/gitlibtest",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "bh_iOS": "hubei@sigo.cn"
+  },
+  "source": {
+    "git": "https://github.com/bh_iOS/gitlibtest.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "gitlibtest/Classes/**/*",
+  "vendored_frameworks": [
+    "gitlibtest/Frameworks/App.framework",
+    "gitlibtest/Frameworks/Flutter.framework"
+  ]
+}
