@@ -1,0 +1,6 @@
+framework module gitlibtest {
+  umbrella header "gitlibtest-umbrella.h"
+
+  export *
+  module * { export * }
+}
