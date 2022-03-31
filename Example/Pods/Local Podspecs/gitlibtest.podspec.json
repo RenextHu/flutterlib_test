@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "summary": "A short description of gitlibtest.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/bh_iOS/gitlibtest",
+  "homepage": "https://github.com/RenextHu/flutterlib_test",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "bh_iOS": "hubei@sigo.cn"
+    "bh_iOS": "hubei_0721@126.com"
   },
   "source": {
-    "git": "https://github.com/bh_iOS/gitlibtest.git",
+    "git": "https://github.com/RenextHu/flutterlib_test.git",
     "tag": "0.1.0"
   },
   "platforms": {
