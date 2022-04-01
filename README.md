@@ -22,8 +22,7 @@ pod 'gitlibtest'
 
 ## Author
 
-bh_iOS
-
+bbh
 ## License
 
 gitlibtest is available under the MIT license. See the LICENSE file for more info.
