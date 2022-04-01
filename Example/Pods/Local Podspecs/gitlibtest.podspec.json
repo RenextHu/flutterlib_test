@@ -19,8 +19,9 @@
     "ios": "9.0"
   },
   "source_files": "gitlibtest/Classes/**/*",
-  "vendored_frameworks": [
-    "gitlibtest/Frameworks/App.framework",
-    "gitlibtest/Frameworks/Flutter.framework"
-  ]
+  "ios": {
+    "vendored_frameworks": [
+      "gitlibtest/Frameworks/*.framework"
+    ]
+  }
 }

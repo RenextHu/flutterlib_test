@@ -367,12 +367,14 @@
 				"${PODS_ROOT}/Target Support Files/Pods-gitlibtest_Example/Pods-gitlibtest_Example-frameworks.sh",
 				"${PODS_ROOT}/../../gitlibtest/Frameworks/App.framework",
 				"${PODS_ROOT}/../../gitlibtest/Frameworks/Flutter.framework",
+				"${PODS_ROOT}/../../gitlibtest/Frameworks/shared_preferences_ios.framework",
 				"${BUILT_PRODUCTS_DIR}/gitlibtest/gitlibtest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/App.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flutter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/shared_preferences_ios.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/gitlibtest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

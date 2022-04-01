@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'gitlibtest'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of gitlibtest.'
+s.name             = 'gitlibtest'
+s.version          = '0.1.0'
+s.summary          = 'A short description of gitlibtest.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,29 +17,33 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
+s.description      = <<-DESC
 TODO: Add long description of the pod here.
-                       DESC
+DESC
 
-  s.homepage         = https://github.com/RenextHu/flutterlib_test'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'bh_iOS' => 'hubei@sigo.cn' }
-  s.source           = { :git => 'https://github.com/RenextHu/flutterlib_test.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+s.homepage         = 'https://github.com/RenextHu/flutterlib_test'
+# s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+s.license          = { :type => 'MIT', :file => 'LICENSE' }
+s.author           = { 'bh_iOS' => 'hubei_0721@126.com' }
+s.source           = { :git => 'https://github.com/RenextHu/flutterlib_test.git', :tag => s.version.to_s }
+# s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+s.ios.deployment_target = '9.0'
 
-  s.source_files = 'gitlibtest/Classes/**/*'
-  
-  s.vendored_frameworks = 'gitlibtest/Frameworks/App.framework',
-    'gitlibtest/Frameworks/Flutter.framework'
-    
-  # s.resource_bundles = {
-  #   'gitlibtest' => ['gitlibtest/Assets/*.png']
-  # }
+s.source_files = 'gitlibtest/Classes/**/*'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
+
+p=Dir::open("gitlibtest")
+arr = Array.new
+arr.push('gitlibtest/Frameworks/*.framework')
+s.ios.vendored_frameworks =arr
+
+# s.resource_bundles = {
+#   'gitlibtest' => ['gitlibtest/Assets/*.png']
+# }
+
+# s.public_header_files = 'Pod/Classes/**/*.h'
+# s.frameworks = 'UIKit', 'MapKit'
+# s.dependency 'AFNetworking', '~> 2.3'
 end
