@@ -22,7 +22,7 @@ pod 'gitlibtest'
 
 ## Author
 
-bh_iOS, hubei@sigo.cn
+bh_iOS
 
 ## License
 
