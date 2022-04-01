@@ -22,7 +22,6 @@ TODO: Add long description of the pod here.
 DESC
 
 s.homepage         = 'https://github.com/RenextHu/flutterlib_test'
-# s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'bh_iOS' => 'hubei_0721@126.com' }
 s.source           = { :git => 'https://github.com/RenextHu/flutterlib_test.git', :tag => s.version.to_s }
