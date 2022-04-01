@@ -39,11 +39,4 @@ arr = Array.new
 arr.push('gitlibtest/Frameworks/*.framework')
 s.ios.vendored_frameworks =arr
 
-# s.resource_bundles = {
-#   'gitlibtest' => ['gitlibtest/Assets/*.png']
-# }
-
-# s.public_header_files = 'Pod/Classes/**/*.h'
-# s.frameworks = 'UIKit', 'MapKit'
-# s.dependency 'AFNetworking', '~> 2.3'
 end
