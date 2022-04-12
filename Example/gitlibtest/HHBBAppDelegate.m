@@ -12,7 +12,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+ 
+    self.flutterEngine = [[FlutterEngine alloc] initWithName:@"my flutter engine"];
+    // Runs the default Dart entrypoint with a default Flutter route.
+    [self.flutterEngine run];
+    // Used to connect plugins (only if you have plugins with iOS platform code).
+    [GeneratedPluginRegistrant registerWithRegistry:self.flutterEngine];
     return YES;
 }
 

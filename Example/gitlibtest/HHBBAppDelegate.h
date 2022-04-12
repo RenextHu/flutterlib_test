@@ -7,9 +7,11 @@
 //
 
 @import UIKit;
+#import <FlutterPluginRegistrant/GeneratedPluginRegistrant.h>
 
 @interface HHBBAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic,strong) FlutterEngine *flutterEngine;
 
 @end
