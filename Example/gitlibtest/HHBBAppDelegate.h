@@ -7,7 +7,8 @@
 //
 
 @import UIKit;
-#import <FlutterPluginRegistrant/GeneratedPluginRegistrant.h>
+#import <Flutter/Flutter.h>
+
 
 @interface HHBBAppDelegate : UIResponder <UIApplicationDelegate>
 

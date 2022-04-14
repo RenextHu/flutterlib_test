@@ -7,9 +7,13 @@
 //
 
 #import "HHBBViewController.h"
+#import "HHBBAppDelegate.h"
+#import <Flutter/Flutter.h>
 
 @interface HHBBViewController ()
+@property(nonatomic)FlutterViewController *gFlutterViewController;
 
+@property(nonatomic)FlutterEngine *gFlutterEngine;
 @end
 
 @implementation HHBBViewController
@@ -18,23 +22,25 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor systemBlueColor];
-    self.gFlutterEngine =((AppDelegate *)UIApplication.sharedApplication.delegate).flutterEngine;
+    self.gFlutterEngine =((HHBBAppDelegate *)UIApplication.sharedApplication.delegate).flutterEngine;
     // Do any additional setup after loading the view.
     
-     self.gFlutterViewControllerl = [[FlutterViewController alloc]  initWithEngine:self.gFlutterEngine nibName:nil bundle:nil];
+     self.gFlutterViewController = [[FlutterViewController alloc]  initWithEngine:self.gFlutterEngine nibName:nil bundle:nil];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setFrame:CGRectMake(100, 100, 200, 50)];
-    [button setBackgroundColor:[UIColor greenColor]];
+    [button setBackgroundColor:[UIColor systemRedColor]];
     [button setTitle:@"ClickMePushToFlutterVC" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(btn_click:) forControlEvents:UIControlEventTouchUpInside];
+    button.tag=1;
+
     [self.view addSubview:button];
     
     
     
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
     [button2 setFrame:CGRectMake(100, 300, 200, 50)];
-    [button2 setBackgroundColor:[UIColor redColor]];
+    [button2 setBackgroundColor:[UIColor systemGreenColor]];
     [button2 setTitle:@"ClickMePushToFlutterVC2" forState:UIControlStateNormal];
     [button2 addTarget:self action:@selector(btn_click:)
       
@@ -46,37 +52,48 @@
 - (void)btn_click:(UIButton*)sender {
     
  
-    if (sender.tag==1) {
-        FlutterMethodChannel* flutterMethodChannel = [[FlutterMethodChannel alloc]initWithName:@"two_page" binaryMessenger:self.gFlutterEngine.binaryMessenger codec:nil] ;
-        [flutterMethodChannel invokeMethod:@"two" arguments:@{@"name":@"zzzzz"} result:^(id  _Nullable result) {
-
-        }];
+    if (sender.tag==2) {
+        FlutterMethodChannel* flutterMethodChannel = [FlutterMethodChannel  methodChannelWithName:@"two_page" binaryMessenger:self.gFlutterViewController.binaryMessenger] ;
+        [flutterMethodChannel invokeMethod:@"two"  arguments:@{@"two":@"绿色dddd"}];
 
             if (self.navigationController) {
-                [self.navigationController pushViewController:self.gFlutterViewControllerl animated:YES];
+                [self.navigationController pushViewController:self.gFlutterViewController animated:YES];
             } else {
-                self.gFlutterViewControllerl.modalPresentationStyle  = UIModalPresentationOverFullScreen;
-                 [self presentViewController:self.gFlutterViewControllerl animated:YES completion:nil];
+                self.gFlutterViewController.modalPresentationStyle  = UIModalPresentationOverFullScreen;
+                 [self presentViewController:self.gFlutterViewController animated:YES completion:nil];
             }
         [flutterMethodChannel setMethodCallHandler:^(FlutterMethodCall * _Nonnull call, FlutterResult  _Nonnull result) {
-            NSLog(@"--------%@>>>>>%@",call.method,call.arguments);
+            NSLog(@"2222llll--------%@>>>>>%@",call.method,call.arguments);
+            if (self.navigationController) {
+                [self.navigationController popViewControllerAnimated:YES];
+            } else {
+                [self dismissViewControllerAnimated:true completion:nil];
+    
+            }
+//            [UIAlertAction ]
         }];
 
 
     }else{
-        FlutterMethodChannel* flutterMethodChannel = [[FlutterMethodChannel alloc]initWithName:@"one_page" binaryMessenger:self.gFlutterEngine.binaryMessenger codec:nil] ;
-        [flutterMethodChannel invokeMethod:@"one" arguments:@{@"name":@"zzzzz"} result:^(id  _Nullable result) {
-
-        }];
+        FlutterMethodChannel* flutterMethodChannel = [FlutterMethodChannel methodChannelWithName:@"one_page" binaryMessenger:self.gFlutterViewController.binaryMessenger];
+        [flutterMethodChannel invokeMethod:@"one" arguments:@{@"one":@"红色dddd"}];
 
             if (self.navigationController) {
-                [self.navigationController pushViewController:self.gFlutterViewControllerl animated:YES];
+                [self.navigationController pushViewController:self.gFlutterViewController animated:YES];
             } else {
-                self.gFlutterViewControllerl.modalPresentationStyle  = UIModalPresentationOverFullScreen;
-                 [self presentViewController:self.gFlutterViewControllerl animated:YES completion:nil];
+                self.gFlutterViewController.modalPresentationStyle  = UIModalPresentationOverFullScreen;
+                 [self presentViewController:self.gFlutterViewController animated:YES completion:nil];
             }
         [flutterMethodChannel setMethodCallHandler:^(FlutterMethodCall * _Nonnull call, FlutterResult  _Nonnull result) {
-            NSLog(@"--------%@>>>>>%@",call.method,call.arguments);
+            NSLog(@"-1111hhhh-------%@>>>>>%@",call.method,call.arguments);
+            
+            if (self.navigationController) {
+                [self.navigationController popViewControllerAnimated:YES];
+            } else {
+                [self dismissViewControllerAnimated:true completion:nil];
+    
+            }
+            
         }];
     }
 //

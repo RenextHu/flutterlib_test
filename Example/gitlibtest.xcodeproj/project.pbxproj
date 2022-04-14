@@ -37,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0375A88328056281003DBA99 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0375A88528056287003DBA99 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0375A88928056294003DBA99 /* gitlibtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = gitlibtest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		085B195223AE200DAB23860B /* gitlibtest.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = gitlibtest.podspec; path = ../gitlibtest.podspec; sourceTree = "<group>"; };
 		08CEC9AF4CD62C0822D115F7 /* Pods-gitlibtest_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gitlibtest_Tests.debug.xcconfig"; path = "Target Support Files/Pods-gitlibtest_Tests/Pods-gitlibtest_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3593B39AC71DEBF080FE0C22 /* Pods-gitlibtest_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gitlibtest_Tests.release.xcconfig"; path = "Target Support Files/Pods-gitlibtest_Tests/Pods-gitlibtest_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,10 +77,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6CCE9AD86D254989C59C598 /* Pods_gitlibtest_Example.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				A6CCE9AD86D254989C59C598 /* Pods_gitlibtest_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +122,9 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0375A88928056294003DBA99 /* gitlibtest.framework */,
+				0375A88528056287003DBA99 /* FBSnapshotTestCase.framework */,
+				0375A88328056281003DBA99 /* AFNetworking.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -207,7 +213,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				98CA8E74F3602E054D105136 /* [CP] Embed Pods Frameworks */,
+				7B6F7582FD62F68017F60DAF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -343,25 +349,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8B929E731424A3079B2D9428 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-gitlibtest_Tests/Pods-gitlibtest_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gitlibtest_Tests/Pods-gitlibtest_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		98CA8E74F3602E054D105136 /* [CP] Embed Pods Frameworks */ = {
+		7B6F7582FD62F68017F60DAF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,19 +358,37 @@
 				"${PODS_ROOT}/Target Support Files/Pods-gitlibtest_Example/Pods-gitlibtest_Example-frameworks.sh",
 				"${PODS_ROOT}/../../gitlibtest/Frameworks/App.framework",
 				"${PODS_ROOT}/../../gitlibtest/Frameworks/Flutter.framework",
-				"${PODS_ROOT}/../../gitlibtest/Frameworks/shared_preferences_ios.framework",
 				"${BUILT_PRODUCTS_DIR}/gitlibtest/gitlibtest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/App.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flutter.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/shared_preferences_ios.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/gitlibtest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gitlibtest_Example/Pods-gitlibtest_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B929E731424A3079B2D9428 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gitlibtest_Tests/Pods-gitlibtest_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gitlibtest_Tests/Pods-gitlibtest_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -531,6 +537,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -549,6 +556,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

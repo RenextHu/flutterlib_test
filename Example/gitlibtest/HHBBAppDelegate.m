@@ -7,6 +7,7 @@
 //
 
 #import "HHBBAppDelegate.h"
+//#import "FlutterPluginRegistrant/GeneratedPluginRegistrant.h"
 
 @implementation HHBBAppDelegate
 
@@ -17,7 +18,7 @@
     // Runs the default Dart entrypoint with a default Flutter route.
     [self.flutterEngine run];
     // Used to connect plugins (only if you have plugins with iOS platform code).
-    [GeneratedPluginRegistrant registerWithRegistry:self.flutterEngine];
+//    [GeneratedPluginRegistrant registerWithRegistry:self.flutterEngine];
     return YES;
 }
 
